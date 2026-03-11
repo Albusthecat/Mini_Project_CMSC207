@@ -218,7 +218,7 @@ appearance: none;
 
 .image-left {
     width: 40%; 
-    height: 4000px; /
+    height: 400px; /
     object-fit: cover;
     display: block;
 }
