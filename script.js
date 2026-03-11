@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 6. Typing Effect
     // ==========================================
-    const words = ["Hello!", "Kumusta?", "¡Holá!", "Bonjour!", "Sawadee kaa สวัสดีค่ะ!"];
+    const words = ["Hello!", "Kumusta?", "¡Hola!", "Bonjour!", "Sawasdee ka สวัสดีค่ะ!"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
