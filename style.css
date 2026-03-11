@@ -211,43 +211,43 @@ a:hover {
     width: 60%;
 }
 
-.features {
+/* Horizontal Split Layout for Hobbies */
+.features-list {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
     margin-top: 2rem;
 }
 
-.features section { 
-    background: var(--card-bg); 
-    transition: background 0.3s ease; 
+.features-list section {
+    display: flex;
+    flex-direction: row;
+    background: var(--card-bg);
+    border-radius: 0.25rem;
+    overflow: hidden;
+    transition: background 0.3s ease;
 }
 
-/* Styling for Hobbies & Interests Images */
-.feature-image {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 4 / 3; /* Maintain a consistent aspect ratio for all images */
+/* Image styling (Left Side) */
+.image-left {
+    width: 40%; 
+    min-height: 250px;
     object-fit: cover;
-    object-position: center top; /* Focus on the top part of the image */
-    border-radius: 0.25rem 0.25rem 0 0;
-    margin-bottom: 1.5rem;
+    object-position: center top; 
     display: block;
 }
 
-/* Update the features section to remove default padding at the top */
-.features section { 
-    background: var(--card-bg); 
-    transition: background 0.3s ease;
-    padding: 0 0 2rem 0; /* Adjust padding to fit the image perfectly */
-    border-radius: 0.25rem;
-    overflow: hidden;
+.center-focus {
+    object-position: center center;
 }
 
-/* Add padding back to the text inside the feature cards */
-.features section h3, 
-.features section p {
-    padding: 0 2rem;
+/* Text styling (Right Side) */
+.text-content {
+    width: 60%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .split {
@@ -394,5 +394,19 @@ a:hover {
     }
     .header-text .actions {
         justify-content: center;
+    }
+
+    .features-list section {
+        flex-direction: column;
+    }
+    
+    .image-left {
+        width: 100%;
+        height: 250px;
+    }
+    
+    .text-content {
+        width: 100%;
+        padding: 2rem 1.5rem;
     }
 }
