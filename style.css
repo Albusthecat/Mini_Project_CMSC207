@@ -233,12 +233,29 @@ a:hover {
     width: 40%; 
     min-height: 250px;
     object-fit: cover;
-    object-position: center top; 
     display: block;
 }
 
-.center-focus {
+/* Custom Image Cropping Focus */
+.focus-top {
+    object-position: center top;
+}
+
+.focus-center {
     object-position: center center;
+}
+
+.focus-bottom {
+    object-position: center bottom;
+}
+
+/* Text styling (Right Side) */
+.text-content {
+    width: 60%;
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 /* Text styling (Right Side) */
