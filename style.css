@@ -160,7 +160,7 @@ a:hover {
 
 /* Fixed broken syntax in the button class */
 .button {
-    appearance: none;
+appearance: none;
     background-color: transparent;
     border: solid 1px rgba(255, 255, 255, 0.5);
     border-radius: 0.25rem;
@@ -211,7 +211,7 @@ a:hover {
     width: 60%;
 }
 
-/* Horizontal Split Layout for Hobbies */
+/* --- New Side-by-Side Hobbies Layout --- */
 .features-list {
     display: flex;
     flex-direction: column;
@@ -223,40 +223,30 @@ a:hover {
     display: flex;
     flex-direction: row;
     background: var(--card-bg);
-    border-radius: 0.25rem;
+    border-radius: 0.5rem;
     overflow: hidden;
     transition: background 0.3s ease;
 }
 
-/* Container for the cards */
-.features-list section {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
-    align-items: center; /* This centers the text vertically next to the image */
-}
-
-/* Image styling (Left Side) */
 .image-left {
-    width: 35%; /* Reduced slightly from 40% to make the image box smaller */
-    height: 250px; 
+    width: 40%; 
+    height: 350px; /* Increased height to show more of your photos */
     object-fit: cover;
     display: block;
 }
 
-/* Text styling (Right Side) */
+/* --- Specific Focus Points for your Photos --- */
+.focus-top { object-position: center top; }
+.focus-center { object-position: center center; }
+.focus-bottom { object-position: center bottom; }
+
 .text-content {
-    width: 65%; /* Increased from 60% to 65% to give the text more horizontal space */
-    padding: 2rem 3rem; /* Increased padding to create breathing room */
+    width: 60%;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
-/* 5. Custom Focus Points (Crucial for the 250px height) */
-.focus-top { object-position: center top; }
-.focus-center { object-position: center center; }
-.focus-bottom { object-position: center bottom; }
 
 
 .split {
