@@ -228,36 +228,26 @@ a:hover {
     transition: background 0.3s ease;
 }
 
-/* 1. The Container: Remove gaps to stack them seamlessly */
-.features-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0; /* Magic fix: Removes the pink spaces between cards! */
-    margin-top: 2rem;
-    border-radius: 0.5rem; /* Rounds the outer corners of the entire block */
-    overflow: hidden;
-    background: var(--card-bg);
-}
-
-/* 2. The Cards: Remove individual borders */
+/* Container for the cards */
 .features-list section {
     display: flex;
     flex-direction: row;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); 
+    align-items: center; /* This centers the text vertically next to the image */
 }
 
-/* 3. The Image: Perfect height for fitting 2 on a screen */
+/* Image styling (Left Side) */
 .image-left {
-    width: 40%; 
+    width: 35%; /* Reduced slightly from 40% to make the image box smaller */
     height: 250px; 
     object-fit: cover;
     display: block;
 }
 
-/* 4. The Text: Align vertically */
+/* Text styling (Right Side) */
 .text-content {
-    width: 60%;
-    padding: 2rem; 
+    width: 65%; /* Increased from 60% to 65% to give the text more horizontal space */
+    padding: 2rem 3rem; /* Increased padding to create breathing room */
     display: flex;
     flex-direction: column;
     justify-content: center;
