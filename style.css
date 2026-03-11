@@ -223,6 +223,31 @@ a:hover {
     transition: background 0.3s ease; 
 }
 
+/* Styling for Hobbies & Interests Images */
+.feature-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.25rem 0.25rem 0 0;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Update the features section to remove default padding at the top */
+.features section { 
+    background: var(--card-bg); 
+    transition: background 0.3s ease;
+    padding: 0 0 2rem 0; /* Adjust padding to fit the image perfectly */
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+/* Add padding back to the text inside the feature cards */
+.features section h3, 
+.features section p {
+    padding: 0 2rem;
+}
+
 .split {
     display: flex;
     gap: 4rem;
