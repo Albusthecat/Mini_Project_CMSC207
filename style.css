@@ -236,33 +236,38 @@ a:hover {
     margin-top: 2rem;
     border-radius: 0.5rem; /* Rounds the outer corners of the entire block */
     overflow: hidden;
+    background: var(--card-bg);
 }
 
 /* 2. The Cards: Remove individual borders */
 .features-list section {
     display: flex;
     flex-direction: row;
-    background: rgba(0, 0, 0, 0.15); /* Slightly darker background like the reference */
-    border-radius: 0; /* Keep edges sharp where they touch */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* 3. The Image: Perfect height for fitting 2 on a screen */
 .image-left {
-    width: 35%; 
-    height: 300px; 
-    object-fit: contain;
-    background: transparent;
+    width: 40%; 
+    height: 250px; 
+    object-fit: cover;
     display: block;
 }
 
 /* 4. The Text: Align vertically */
 .text-content {
-    width: 65%;
-    padding: 3rem 4rem; 
+    width: 60%;
+    padding: 2rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+/* 5. Custom Focus Points (Crucial for the 250px height) */
+.focus-top { object-position: center top; }
+.focus-center { object-position: center center; }
+.focus-bottom { object-position: center bottom; }
+
 
 .split {
     display: flex;
