@@ -231,7 +231,7 @@ a:hover {
 /* Image styling (Left Side) */
 .image-left {
     width: 35%; 
-    height: auto;
+    height: 180px;
     object-fit: cover;
     display: block;
 }
@@ -252,7 +252,7 @@ a:hover {
 /* Text styling (Right Side) */
 .text-content {
     width: 65%;
-    padding: 2rem 3rem;
+    padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
