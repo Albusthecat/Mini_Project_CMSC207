@@ -228,40 +228,37 @@ a:hover {
     transition: background 0.3s ease;
 }
 
-/* Image styling (Left Side) */
+/* 1. The Container: Remove gaps to stack them seamlessly */
+.features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0; /* Magic fix: Removes the pink spaces between cards! */
+    margin-top: 2rem;
+    border-radius: 0.5rem; /* Rounds the outer corners of the entire block */
+    overflow: hidden;
+}
+
+/* 2. The Cards: Remove individual borders */
+.features-list section {
+    display: flex;
+    flex-direction: row;
+    background: rgba(0, 0, 0, 0.15); /* Slightly darker background like the reference */
+    border-radius: 0; /* Keep edges sharp where they touch */
+}
+
+/* 3. The Image: Perfect height for fitting 2 on a screen */
 .image-left {
     width: 35%; 
-    height: 180px;
-    object-fit: cover;
+    height: 300px; 
+    object-fit: contain;
+    background: transparent;
     display: block;
 }
 
-/* Custom Image Cropping Focus */
-.focus-top {
-    object-position: center top;
-}
-
-.focus-center {
-    object-position: center center;
-}
-
-.focus-bottom {
-    object-position: center bottom;
-}
-
-/* Text styling (Right Side) */
+/* 4. The Text: Align vertically */
 .text-content {
     width: 65%;
-    padding: 1rem 1.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Text styling (Right Side) */
-.text-content {
-    width: 60%;
-    padding: 3rem 2rem;
+    padding: 3rem 4rem; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -419,7 +416,7 @@ a:hover {
     
     .image-left {
         width: 100%;
-        height: auto;
+        height: 250px;
     }
     
     .text-content {
