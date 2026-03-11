@@ -84,10 +84,10 @@ const themeToggle = document.getElementById('theme-toggle');
     const funFactDisplay = document.getElementById('fun-fact-display');
 
     const funFacts = [
-        "Insert your first fun fact here.",
-        "Insert your second fun fact here.",
-        "Insert your third fun fact here.",
-        "Insert your fourth fun fact here."
+        "Albus actually 'helped' me build this website by walking across my keyboard at least a dozen times.",
+        "My degree has nothing to do with tech, but logic is the universal language of both finance and code.",
+        "I am a career shifter who loves the challenge of learning new languages, whether they are human or digital.",
+        "I can order a full meal in five languages, though I sometimes mix them up when I am hungry."
     ];
 
     if (funFactBtn && funFactDisplay) {
