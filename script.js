@@ -5,23 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 1. Smooth Scrolling for Navigation Links
     // ==========================================
-    const scrollLinks = document.querySelectorAll('a[href^="#"]');
-    
-    scrollLinks.forEach(link => {
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
-            
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
@@ -81,18 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
     // 4. Dark/Light Mode Toggle
     // ==========================================
-    const themeToggle = document.getElementById('theme-toggle');
-    
+const themeToggle = document.getElementById('theme-toggle');
     if (themeToggle) {
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('light-mode');
-            
-            // Update button text based on active theme
-            if (document.body.classList.contains('light-mode')) {
-                themeToggle.textContent = 'Dark Mode';
-            } else {
-                themeToggle.textContent = 'Light Mode';
-            }
+            themeToggle.textContent = document.body.classList.contains('light-mode') ? 'Dark Mode' : 'Light Mode';
         });
     }
 
