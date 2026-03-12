@@ -275,6 +275,32 @@ appearance: none;
     margin-bottom: 0.5rem;
 }
 
+.icons {
+    list-style: none; 
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.icons li {
+    padding-left: 0;
+    border-left: none; 
+}
+
+.icons a {
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-color);
+    padding-bottom: 4px;
+    transition: color 0.3s ease;
+}
+
+.icons a:hover {
+    color: var(--heading-color);
+    border-bottom-color: transparent;
+}
+
 /* =========================================
    5. Interactive Elements & Animations
    ========================================= */
