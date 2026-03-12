@@ -94,13 +94,14 @@ background: var(--nav-bg); /* Automatically switches based on theme */
 }
 
 .logo a {
-    color: #ffffff;
+    color: var(--heading-color); /* Dynamically changes with the theme */
     font-size: 1.5rem;
     border-bottom: none;
+    transition: color 0.3s ease;
 }
 
 .logo a:hover {
-    color: rgba(255,255,255,0.8);
+    color: var(--accent-color); /* Highlights in pink or charcoal on hover */
 }
 
 #navbar nav ul {
@@ -322,17 +323,23 @@ appearance: none;
    6. Footer
    ========================================= */
 #footer {
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
-    background-color: var(--bg-color);
-    margin-left: 0;
+    background-color: var(--bg-color); /* Matches the main background */
+    border-top: 1px solid var(--border-color);
 }
 
 #footer .menu {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0;
+}
+
+#footer .menu li {
+    font-size: 0.9rem;
+    color: var(--text-color);
 }
 
 /* =========================================
