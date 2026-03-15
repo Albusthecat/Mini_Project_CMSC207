@@ -169,21 +169,29 @@ a:hover {
 .button {
     appearance: none;
     background-color: transparent;
-    border: solid 1px rgba(255, 255, 255, 0.5);
+    border: solid 2px var(--accent-color); /* Dynamically changes color */
     border-radius: 0.25rem;
-    color: #ffffff !important;
+    color: var(--accent-color); /* Dynamically changes color */
     cursor: pointer;
     display: inline-block;
     padding: 1rem 2rem;
     text-transform: uppercase;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--accent-color);
+    color: var(--bg-color);
 }
 
+.button:disabled {
+    border-color: var(--text-color);
+    color: var(--text-color);
+    background-color: transparent;
+    cursor: not-allowed;
+    opacity: 0.5;
+}
 .actions {
     list-style: none;
     display: flex;
