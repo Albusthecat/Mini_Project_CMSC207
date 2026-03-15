@@ -96,26 +96,20 @@ const themeToggle = document.getElementById('theme-toggle');
         funFactBtn.addEventListener('click', (e) => {
             e.preventDefault();
             
-            // The script checks if the index is less than the total number of facts
+            // Display facts sequentially until the list is exhausted
             if (currentFactIndex < funFacts.length) {
-                // Display the fact at the current index
                 funFactDisplay.textContent = funFacts[currentFactIndex];
                 currentFactIndex++;
             } else {
-                // Display a final message when the list ends
                 funFactDisplay.textContent = "That's all the fun facts I have for now!";
-                
-                // Disable the button to prevent further clicks
                 funFactBtn.disabled = true; 
                 funFactBtn.textContent = "All Done!"; 
                 funFactBtn.style.opacity = "0.5"; 
                 funFactBtn.style.cursor = "not-allowed";
             }
             
-            // Remove class to reset CSS animation
+            // Trigger fade animation
             funFactDisplay.classList.remove('show');
-            
-            // Short delay ensures the browser registers class removal before adding it back
             setTimeout(() => {
                 funFactDisplay.classList.add('show');
             }, 10);
@@ -135,11 +129,9 @@ const themeToggle = document.getElementById('theme-toggle');
         const currentWord = words[wordIndex];
         
         if (isDeleting) {
-            // Remove a character
             typingElement.textContent = currentWord.substring(0, charIndex - 1);
             charIndex--;
         } else {
-            // Add a character
             typingElement.textContent = currentWord.substring(0, charIndex + 1);
             charIndex++;
         }
@@ -151,14 +143,14 @@ const themeToggle = document.getElementById('theme-toggle');
             typeSpeed = 50; // Make deleting faster
         }
 
-        // Check if the word is complete
+        // Handle word completion and transition
         if (!isDeleting && charIndex === currentWord.length) {
-            typeSpeed = 2000; // Pause at the end of the word
+            typeSpeed = 2000;
             isDeleting = true;
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length; // Move to the next word
-            typeSpeed = 500; // Pause before typing the new word
+            wordIndex = (wordIndex + 1) % words.length;
+            typeSpeed = 500;
         }
 
         setTimeout(typeEffect, typeSpeed);
