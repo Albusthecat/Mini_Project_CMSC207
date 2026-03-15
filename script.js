@@ -84,17 +84,33 @@ const themeToggle = document.getElementById('theme-toggle');
     const funFactDisplay = document.getElementById('fun-fact-display');
 
     const funFacts = [
-        "Albus actually 'helped' me build this website by walking across my keyboard at least a dozen times.",
         "My degree has nothing to do with tech, but logic is the universal language of both finance and code.",
+        "Albus actually 'helped' me build this website by walking across my keyboard at least a dozen times.",
         "I am a career shifter who loves the challenge of learning new languages, whether they are human or digital.",
         "I can order a full meal in five languages, though I sometimes mix them up when I am hungry."
     ];
 
+    let currentFactIndex = 0; 
+
     if (funFactBtn && funFactDisplay) {
         funFactBtn.addEventListener('click', (e) => {
             e.preventDefault();
-            const randomIndex = Math.floor(Math.random() * funFacts.length);
-            funFactDisplay.textContent = funFacts[randomIndex];
+            
+            // The script checks if the index is less than the total number of facts
+            if (currentFactIndex < funFacts.length) {
+                // Display the fact at the current index
+                funFactDisplay.textContent = funFacts[currentFactIndex];
+                currentFactIndex++;
+            } else {
+                // Display a final message when the list ends
+                funFactDisplay.textContent = "That is all the fun facts I have for now! Thanks for reading.";
+                
+                // Disable the button to prevent further clicks
+                funFactBtn.disabled = true; 
+                funFactBtn.textContent = "All Done!"; 
+                funFactBtn.style.opacity = "0.5"; 
+                funFactBtn.style.cursor = "not-allowed";
+            }
             
             // Remove class to reset CSS animation
             funFactDisplay.classList.remove('show');
