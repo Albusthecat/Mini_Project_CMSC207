@@ -103,7 +103,7 @@ const themeToggle = document.getElementById('theme-toggle');
                 currentFactIndex++;
             } else {
                 // Display a final message when the list ends
-                funFactDisplay.textContent = "That is all the fun facts I have for now! Thanks for reading.";
+                funFactDisplay.textContent = "That's all the fun facts I have for now!";
                 
                 // Disable the button to prevent further clicks
                 funFactBtn.disabled = true; 
